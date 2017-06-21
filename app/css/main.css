@@ -6,6 +6,10 @@
 html {
   font-size: 62.5%; }
 
+.page {
+  overflow: hidden;
+  color: #fff; }
+
 .one-time {
   width: 100vw;
   height: 100vh; }
@@ -14,8 +18,7 @@ html {
   width: 100vw;
   background: url(../assets/img/Brushed2.jpg);
   height: 100vh;
-  outline: none;
-  color: #fff; }
+  outline: none; }
 
 .one-time img {
   position: relative;
@@ -48,9 +51,11 @@ html {
 
 .slick-dots {
   position: relative;
-  top: -30px;
+  top: -50px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  background-color: #2f3238;
+  padding: 20px 0; }
 
 #slick-slide00, #slick-slide01, #slick-slide02 {
   text-indent: -9999px;
@@ -63,5 +68,53 @@ html {
   margin-right: 1rem;
   list-style: none; }
 
-.slick-slide00 .slick-active {
+#slick-slide00:hover, #slick-slide01:hover, #slick-slide02:hover {
   background-color: #de5e60; }
+
+/* HEADER ------------------------------------------------------------------------------------
+----------------------------------------------------------------------------*/
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background: #26292e; }
+
+.header .logo {
+  padding: 2.4rem; }
+
+.navigation .menu {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between; }
+
+.navigation .menu li {
+  list-style: none;
+  margin-right: 48px; }
+
+.navigation .menu a:hover {
+  color: #de5e60; }
+
+.navigation .menu li:last-child {
+  margin-right: 25px; }
+
+.navigation .menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff; }
+
+/* MAIN -------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------*/
+.main {
+  background: #2f3238; }
+
+.mainContent {
+  max-width: 1170px; }
+
+.main h2, .main h3 {
+  text-align: center; }
+
+.main h2 {
+  padding-top: 100px; }
+
+main h3 span {
+  color: #de5e60; }

@@ -1,3 +1,4 @@
+$colorRed: #de5e60;
 
 * {
   box-sizing: border-box;
@@ -7,18 +8,22 @@
 html {
   font-size: 62.5%; }
 
+
+.page {
+    overflow: hidden;
+    color: #fff;
+}
 .one-time {
 	width: 100vw;
 	height: 100vh;
-//	overflow: hidden;
+	
 }
 
 .one-time div{
 	width: 100vw;
 	background: url(../assets/img/Brushed2.jpg);
 	height: 100vh;
-	outline: none;
-	color: #fff;
+    outline: none;
 }
 
 .one-time img{
@@ -34,11 +39,11 @@ html {
 	background: url(../assets/img/arrow-down.png) 18px 17px no-repeat #26292e;
 	text-indent: -99999px;
 	border: none;
-	outline: none;
+    outline: none;
 	position: absolute;
 	z-index: 2;
 	&:hover {
-		background-color: #de5e60;
+		background-color: $colorRed;
 	}
 }
 
@@ -58,9 +63,11 @@ html {
 
 .slick-dots  {
 	position: relative;
-	top: -30px;
+	top: -50px;
 	display: flex;
 	justify-content: center;
+    background-color: #2f3238;
+    padding: 20px 0;
 }
 
 #slick-slide00, #slick-slide01, #slick-slide02{
@@ -76,6 +83,63 @@ html {
 	list-style: none;
 }
 
-.slick-slide00 .slick-active {
-	background-color: #de5e60;
+#slick-slide00:hover, #slick-slide01:hover, #slick-slide02:hover {
+	background-color: $colorRed;
+}
+
+/* HEADER ------------------------------------------------------------------------------------
+----------------------------------------------------------------------------*/
+
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background: #26292e;
+}
+.header .logo {
+    padding: 2.4rem; }
+
+.navigation .menu {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation .menu li{
+    list-style: none;
+    margin-right: 48px;
+}
+
+.navigation .menu a:hover{
+    color: $colorRed;
+}
+
+.navigation .menu li:last-child{
+    margin-right: 25px;
+}
+
+.navigation .menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* MAIN -------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------*/
+
+.main {
+    background: #2f3238;
+}
+.mainContent {
+    max-width: 1170px;
+}
+.main h2, .main h3{
+    text-align: center;
+}
+.main h2 {
+    padding-top: 100px;
+}
+
+main h3 span {
+    color: $colorRed;
 }

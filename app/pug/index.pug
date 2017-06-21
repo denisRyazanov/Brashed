@@ -5,14 +5,56 @@ include var/mixins.pug
 
 html
 	include includes/head.pug
-	body 
+	body
+	.page
 		.one-time
 			.firstSlide
-				img(src="../assets/img/Brashed.png")
+				img(src="assets/img/Brushed.png", alt="logo")
 			.secondSlide
-				img(src="../assets/img/Brashed.png")
+				img(src="assets/img/Brushed.png", alt="logo")
 			.thirdSlide
-				img(src="../assets/img/Brashed.png")
+				img(src="assets/img/Brushed.png", alt="logo")
+		header.header
+			.logo
+				img(src="assets/img/logo.png", alt="logo")
+			nav.navigation
+				ul.menu
+					li
+						a(href="") home
+					li
+						a(href="") our work
+					li
+						a(href="") about us
+					li
+						a(href="") contact
+		main.main
+			.mainContent.container
+				h2 Our Work
+				h3 See Also Great Stuff on 
+					span Dribbble.
+				section.section
+					article.article.aside
+						h4 Type of work
+						ul
+							li
+                                a(href="") All
+							li
+                                a(href="") Icons
+							li
+                                a(href="") 3D
+							li
+                                a(href="") UX/UI
+							li
+                                a(href="") Concepts
+					article.article
+					article.article
+					article.article
+					article.article
+					article.article
+					article.article
+					article.article
+					article.article
+					article.article
 		script(src="js/jquery-3.2.1.min.js")
 		script(src="js/slick.min.js")
 		script(src="js/user.js")
