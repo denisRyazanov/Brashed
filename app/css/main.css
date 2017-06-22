@@ -86,6 +86,7 @@ html {
 .navigation .menu {
   margin-top: 25px;
   display: flex;
+  flex-flow: wrap;
   justify-content: space-between; }
 
 .navigation .menu li {
@@ -145,7 +146,67 @@ main h3 span {
   margin-bottom: 30px; }
 
 .article .content {
-  width: 270px;
   height: 200px;
   background: #26292e;
   margin-bottom: 30px; }
+
+.section .article:nth-of-type(2n+3) div {
+  background: #32353b; }
+
+.section .article:nth-of-type(6) div {
+  background: #de5e60; }
+
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  width: calc(30% + 34px);
+  left: calc(-1 * (30% + 34px));
+  transition: left 1s;
+  background: rgba(0, 0, 0, 0.8); }
+
+.active {
+  left: 0; }
+
+.navigation {
+  position: relative; }
+
+.header__button {
+  margin-bottom: 1rem;
+  float: right;
+  padding: .6rem;
+  position: relative;
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  display: block;
+  top: -40px;
+  height: 24px;
+  width: 34px; }
+
+.header__button::before {
+  content: '';
+  height: 4px;
+  width: 34px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  background: #fff; }
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu {
+    position: static;
+    width: 100%;
+    background: none; }
+  .navigation {
+    position: static; }
+  .header__button {
+    display: none; }
+  .section .article:nth-of-type(2n+1) div {
+    background: #26292e; }
+  .section .article:nth-of-type(6) div {
+    background: #26292e; } }
+
+@media screen and (min-width: 1170px) {
+  .section .aside {
+    margin-bottom: 325px; } }

@@ -7,3 +7,10 @@ $(document).ready(function(){
 		adaptiveHeight: true
 	});
 }); 
+
+$(document).ready(function() {
+	$('.header__button').click(function() {
+		$('.header__button').toggleClass('active');
+		$('.menu').toggleClass('active');
+	});
+});
