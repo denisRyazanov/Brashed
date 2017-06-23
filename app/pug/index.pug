@@ -28,43 +28,92 @@ html
 						a(href="") about us
 					li
 						a(href="") contact
-		main.main
+		main.main.row
 			.mainContent.container-fluid
-				h2 Our Work
-				h3 See Also Great Stuff on 
-					span Dribbble.
-				section.section.row
-					article.article.aside.col-lg-3
-						h4 Type of work
-						ul
-							li
-								a(href="") All
-							li
-								a(href="") Icons
-							li
-								a(href="") 3D
-							li
-								a(href="") UX/UI
-							li
-								a(href="") Concepts
-					article.article.col-lg-3
-						.content
-					article.article.col-lg-3
-						.content
-					article.article.col-lg-3
-						.content
-					article.article.col-lg-3
-						.content
-					article.article.col-lg-3
-						.content
-					article.article.col-lg-3
-						.content
-					article.article.col-lg-3
-						.content
-					article.article.col-lg-3
-						.content
-					article.article.col-lg-3
-						.content
+				.ourWorkWrapper
+					.ourWork
+						h2 Our Work
+						h3 See Also Great Stuff on 
+							span Dribbble.
+						section.section.row
+							article.article.aside.col-lg-3
+								h4 Type of work
+								ul
+									li
+										a(href="") All
+									li
+										a(href="") Icons
+									li
+										a(href="") 3D
+									li
+										a(href="") UX/UI
+									li
+										a(href="") Concepts
+							article.article.col-sm-4.col-lg-3
+								.content
+							article.article.col-sm-4.col-lg-3
+								.content
+							article.article.col-sm-4.col-lg-3
+								.content
+							article.article.col-sm-4.col-lg-3
+								.content
+							article.article.col-sm-4.col-lg-3
+								.content
+							article.article.col-sm-4.col-lg-3
+								.content
+							article.article.col-sm-4.col-lg-3
+								.content
+							article.article.col-sm-4.col-lg-3
+								.content
+							article.article.col-sm-4.col-lg-3
+								.content
+				.aboutUsWrapper
+					.aboutUs
+						h2 Abou Us
+						h3 The most important thing to us is building products people love.
+						section.section
+							.row
+								article.article.col-sm-6.col-lg-4
+									.content
+									h3 John Doe
+									p Our work was redesigning the outdated user interface of Rotix, a puzzle game. We used simple, bright colors and a clean approach to produce a stunning, pixel-perfect UI.
+									.social
+								article.article.col-sm-6.col-lg-4
+									.content
+									h3 Jane Helf
+									p Our work was redesigning the outdated user interface of Rotix, a puzzle game. We used simple, bright colors and a clean approach to produce a stunning, pixel-perfect UI.
+									.social
+								article.article.col-sm-6.col-lg-4
+									.content
+									h3 Joshua Insanus
+									p Our work was redesigning the outdated user interface of Rotix, a puzzle game. We used simple, bright colors and a clean approach to produce a stunning, pixel-perfect UI.
+									.social
+							.row
+								article.article.border.col-sm-9
+									h3 New Brushed- PRemium one page html/css template
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque diam, luctus at laoreet in, auctor ut tellus. Etiam enim lacus, ornare et tempor, rhoncus rhoncus sem. Aliquam volutpat arcu et nibh mollis eleifend pharetra lorem scelerisque. Donec vel enim purus, id viverra neque. Cras in velit ante, eget pellentesque sem. Duis tincidunt erat quam. Etiam placerat sapien elit.
+								.purchase.col-sm-3
+									a(href="") PURCHASE
+					.getInTouchWrapper
+						.getInTouch
+							h2 Get in Touch
+							h3 We’re currently accepting new client projects. Think we might help? We’d love to hear from you.  people love.
+							.row
+								form.formMessage.col-sm-9
+									input.text(type="text", placeholder="Full Name")
+									input.email(type="email", placeholder="Email Address")
+									input.text2(type="text", placeholder="Your Message")
+									input.submit(type="submit", value="Submit")
+								.contacts.col-sm-3
+									h3 CONTACT DETAILS
+									p info@creativeds.sh
+									p (916)378-4475
+									p Creativedash 5701 Lonetree Blvd. 105 Rocklin,CA 95765
+		footer.footer
+			.footerWrapper
+				.searching
+				.social
+				.copyright
 		script(src="js/jquery-3.2.1.min.js")
 		script(src="js/slick.min.js")
 		script(src="js/user.js")

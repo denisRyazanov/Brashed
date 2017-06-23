@@ -11,12 +11,16 @@ html {
 
 .page {
     overflow: hidden;
-    color: #fff;
+	overflow-y: hidden;
+    color: #fefefe;
+	font-size: 1.6rem;
 }
+
+/* Slider ---------------------------------------------------------------
+--------------------------------------------------*/
 .one-time {
 	width: 100vw;
 	height: 100vh;
-	
 }
 
 .one-time div{
@@ -126,14 +130,67 @@ html {
     color: #fff;
 }
 
+.menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 3;
+	width: calc(30% + 34px);
+	left: calc(-1 * (30% + 34px));
+	transition: left 1s;
+	background: rgba(0,0,0,.8);}
+	.active {
+		left: 0;}
+	
+.navigation {
+	position: relative;}
+
+.header__button {
+	margin-bottom: 1rem;
+	float: right;
+	padding: .6rem;
+	position: relative;
+	border-top: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	display: block;
+    top: -40px;
+	height: 24px;
+	width: 34px;
+}
+.header__button::before {
+	content: '';
+	height: 4px;
+	width: 34px;
+	position: absolute;
+	top: 6px;
+	left: 0;
+	background: #fff;}
+
+@media screen and (min-width: 768px) {
+	
+.menu {
+	position: static;
+	width: 100%;
+	background: none;
+}
+
+.navigation {
+	position: static;}
+
+.header__button {
+	display: none;
+}
+	
+}
 /* MAIN -------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------*/
 
-.main {
+.ourWorkWrapper {
     background: #2f3238;
 }
-.mainContent {
+.ourWork, .aboutUs, .getInTouch {
     max-width: 1170px;
+	margin: auto;
 }
 .main h2, .main h3{
     text-align: center;
@@ -171,96 +228,131 @@ main h3 span {
 	color: #fff;
 }
 
-.aside .article {
-	margin-bottom: 30px;
-}
-
-.article .content{
+.main .content{
 	height: 200px;
 	background: #26292e;
 	margin-bottom: 30px;
 }
 
-.section .article:nth-of-type(2n+3) div{
+.ourWork .article:nth-of-type(2n+3) div{
 	background: #32353b;
 }
   
-.section .article:nth-of-type(6) div{
+.ourWork .article:nth-of-type(6) div{
 	background: $colorRed;
 }
 
-.menu {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	z-index: 3;
-	width: calc(30% + 34px);
-	left: calc(-1 * (30% + 34px));
-	transition: left 1s;
-	background: rgba(0,0,0,.8);}
-	.active {
-		left: 0;}
-	
-.navigation {
-	position: relative;}
+.ourWork li a {
+		 color: #7f8289;
+	}
 
-.header__button {
-	margin-bottom: 1rem;
-	float: right;
-	padding: .6rem;
-	position: relative;
-	border-top: 4px solid #fff;
-	border-bottom: 4px solid #fff;
-	display: block;
-    top: -40px;
-	height: 24px;
-	width: 34px;
+	.ourWork li a:hover {
+		 color: $colorRed;
+	}
+
+@media screen and (max-width: 1024px)  {
+.section .aside {
+		text-align: center;
+	}
 }
-.header__button::before {
-	content: '';
-	height: 4px;
-	width: 34px;
-	position: absolute;
-	top: 6px;
-	left: 0;
-	background: #fff;}
-
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    
-.menu {
-    position: static;
-    width: 100%;
-    background: none;
-    }
-	
-.navigation {
-	position: static;}
-
-.header__button {
-	display: none;
-}
-  
-.section .article:nth-of-type(2n+1) div{
-	background: #26292e;
-}
-
-    .section .article:nth-of-type(6) div{
-	background: #26292e;
-}
-    
-}
-
-//@media screen and (min-width: 992px) {
-//    .section .article:nth-of-type(3n) div{
-//	background: #26292e;
-//}
-
 
 @media screen and (min-width: 1170px) {
     
-.section .aside {
-    margin-bottom: 325px;
+	.ourWork .aside {
+		margin-bottom: 325px;
+	}
 }
-    
+
+/* About US ----------------------------------------------------------------
+--------------------------------------------------*/
+
+.aboutUsWrapper {
+	background: #26292e;
+}
+
+.aboutUs .content {
+	height: 270px;
+	background: #2f3238;
+}
+
+.aboutUs .article:nth-of-type(2) div {
+	background: $colorRed;
+}
+
+.aboutUs .article h3 {
+	text-align: left;
+	margin-bottom: 1.5rem;
+}
+
+.aboutUs .article {
+	margin-bottom: 10rem;
+}
+
+.aboutUs .border {
+	border-left: 4px solid $colorRed;
+}
+
+.aboutUs .border h3 {
+	padding-top: 3rem;
+	text-transform: uppercase;
+}
+
+.aboutUs .border p {
+	padding-bottom: 3rem;
+}
+
+.aboutUs .border h3::first-word {
+	color: $colorRed;
+}
+
+
+
+.aboutUs .purchase a{
+	position: relative;
+	left: 80px;
+	top: 80px;
+	color: #fefefe;
+	text-decoration: none;
+	font-size: 1.6rem;
+	padding: 1.5rem 3rem;
+	background: #3c3f45;
+}
+
+.aboutUs .purchase a:hover{
+	background: $colorRed;
+}
+
+/* .Get In Touch --------------------------------------------------------------
+------------------------------------------*/
+.getInTouchWrapper {
+    background: #2f3238;
+}
+.getInTouch .formMessage {
+	margin-bottom: 100px;
+	display: flex;
+	flex-flow: column;
+}
+
+.formMessage input {
+	padding-left: 20px;
+	background: #26292e;
+	border: none;
+	color: #7f8289;
+	height: 60px;
+}
+
+.formMessage .submit {
+	width: 170px;
+	padding: 20px 55px;
+	background: #3c3f45;
+}
+
+.formMessage .text2 {
+	height: 400px;
+	margin-bottom: 30px;
+}
+
+.getInTouch .contacts h3, p {
+	margin-bottom: 30px;
+	text-align: left;
 }
