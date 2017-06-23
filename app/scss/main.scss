@@ -1,4 +1,6 @@
 $colorRed: #de5e60;
+$colorGrey: #2f3238;
+$colorDarkGrey: #26292e;
 
 * {
   box-sizing: border-box;
@@ -10,10 +12,15 @@ html {
 
 
 .page {
+    font-family: "Titillium Web";
     overflow: hidden;
 	overflow-y: hidden;
     color: #fefefe;
 	font-size: 1.6rem;
+}
+
+.page span{
+    color: $colorRed;
 }
 
 /* Slider ---------------------------------------------------------------
@@ -40,7 +47,7 @@ html {
 .one-time .slick-arrow {
 	height: 50px;
 	width: 50px;
-	background: url(../assets/img/arrow-down.png) 18px 17px no-repeat #26292e;
+	background: url(../assets/img/arrow-down.png) 18px 17px no-repeat $colorDarkGrey;
 	text-indent: -99999px;
 	border: none;
     outline: none;
@@ -70,7 +77,7 @@ html {
 	top: -50px;
 	display: flex;
 	justify-content: center;
-    background-color: #2f3238;
+    background-color: $colorGrey;
     padding: 20px 0;
 }
 
@@ -99,7 +106,7 @@ html {
     width: 100vw;
     display: flex;
     justify-content: space-between;
-    background: #26292e;
+    background: $colorDarkGrey;
 }
 .header .logo {
     padding: 2.4rem; }
@@ -125,9 +132,10 @@ html {
 }
 
 .navigation .menu a{
+    font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
+    color: #fefefe;
 }
 
 .menu {
@@ -186,7 +194,7 @@ html {
 -----------------------------------------------------------------------*/
 
 .ourWorkWrapper {
-    background: #2f3238;
+    background: $colorGrey;
 }
 .ourWork, .aboutUs, .getInTouch {
     max-width: 1170px;
@@ -224,13 +232,12 @@ main h3 span {
 
 .aside ul a{
 	text-decoration: none;
-	font-size: 1.6rem;
 	color: #fff;
 }
 
 .main .content{
 	height: 200px;
-	background: #26292e;
+	background: $colorDarkGrey;
 	margin-bottom: 30px;
 }
 
@@ -267,7 +274,7 @@ main h3 span {
 --------------------------------------------------*/
 
 .aboutUsWrapper {
-	background: #26292e;
+	background: $colorDarkGrey;
 }
 
 .aboutUs .content {
@@ -275,7 +282,13 @@ main h3 span {
 	background: #2f3238;
 }
 
-.aboutUs .article:nth-of-type(2) div {
+.aboutUs .content p{
+	text-align: center;
+    font-size: 2rem;
+    padding-top: 115px;
+}
+
+.aboutUs .contentRed {
 	background: $colorRed;
 }
 
@@ -286,6 +299,10 @@ main h3 span {
 
 .aboutUs .article {
 	margin-bottom: 10rem;
+}
+
+.aboutUs .social img {
+	margin-right: 1.5rem
 }
 
 .aboutUs .border {
@@ -305,15 +322,12 @@ main h3 span {
 	color: $colorRed;
 }
 
-
-
 .aboutUs .purchase a{
 	position: relative;
 	left: 80px;
 	top: 80px;
 	color: #fefefe;
 	text-decoration: none;
-	font-size: 1.6rem;
 	padding: 1.5rem 3rem;
 	background: #3c3f45;
 }
@@ -334,6 +348,8 @@ main h3 span {
 }
 
 .formMessage input {
+    text-align: top;
+    outline: none;
 	padding-left: 20px;
 	background: #26292e;
 	border: none;
@@ -345,6 +361,11 @@ main h3 span {
 	width: 170px;
 	padding: 20px 55px;
 	background: #3c3f45;
+    color: #fefefe;
+}
+
+.formMessage .submit:hover {
+	background: $colorRed;
 }
 
 .formMessage .text2 {
@@ -352,7 +373,72 @@ main h3 span {
 	margin-bottom: 30px;
 }
 
-.getInTouch .contacts h3, p {
-	margin-bottom: 30px;
-	text-align: left;
+.getInTouch h3 {
+    font-weight: 300;
+    text-align: center;
+	margin-bottom: 100px;
+}
+.getInTouch p {
+    text-align: center;
+}
+@media screen and (min-width: 768px) {
+    
+    .getInTouch p {
+        text-align: left;
+    }
+    
+    .getInTouch h3 {
+	    text-align: left;
+    }
+}
+
+.formMessage .text,.formMessage .email {
+	border-bottom: 0.5px solid grey;
+}
+.footerWrapper p{
+    text-align: center;
+}
+.footerWrapper .searching {
+    text-align: center;
+    background: #26292e;
+}
+.searching p {
+    padding: 115px 0 70px 0;
+    font-size: 2.0rem;
+    color: #7f8289;
+}
+
+.searching img {
+    padding-bottom: 3rem;
+}
+
+.searching span:nth-of-type(2) {
+    color: #fefefe;
+}
+
+.footerWrapper .social{
+    background: #2f3238;
+}
+.footerWrapper .copyright{
+     background: #26292e;
+}
+
+.copyright span:nth-of-type(2) {
+    color: #fefefe;
+}
+
+.footerWrapper .copyright p{
+    padding: 25px 0;
+    font-size: 1.2rem;
+}
+
+.footerWrapper .social a{
+    width: 70px;
+    height: 70px;
+    background: #26292e;
+}
+
+.footerWrapper .social img{
+//    padding: 1.5rem;
+//    background: $colorRed;
 }

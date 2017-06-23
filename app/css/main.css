@@ -7,10 +7,14 @@ html {
   font-size: 62.5%; }
 
 .page {
+  font-family: "Titillium Web";
   overflow: hidden;
   overflow-y: hidden;
   color: #fefefe;
   font-size: 1.6rem; }
+
+.page span {
+  color: #de5e60; }
 
 /* Slider ---------------------------------------------------------------
 --------------------------------------------------*/
@@ -104,9 +108,10 @@ html {
   margin-right: 25px; }
 
 .navigation .menu a {
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff; }
+  color: #fefefe; }
 
 .menu {
   position: fixed;
@@ -191,7 +196,6 @@ main h3 span {
 
 .aside ul a {
   text-decoration: none;
-  font-size: 1.6rem;
   color: #fff; }
 
 .main .content {
@@ -228,7 +232,12 @@ main h3 span {
   height: 270px;
   background: #2f3238; }
 
-.aboutUs .article:nth-of-type(2) div {
+.aboutUs .content p {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 115px; }
+
+.aboutUs .contentRed {
   background: #de5e60; }
 
 .aboutUs .article h3 {
@@ -237,6 +246,9 @@ main h3 span {
 
 .aboutUs .article {
   margin-bottom: 10rem; }
+
+.aboutUs .social img {
+  margin-right: 1.5rem; }
 
 .aboutUs .border {
   border-left: 4px solid #de5e60; }
@@ -257,7 +269,6 @@ main h3 span {
   top: 80px;
   color: #fefefe;
   text-decoration: none;
-  font-size: 1.6rem;
   padding: 1.5rem 3rem;
   background: #3c3f45; }
 
@@ -275,6 +286,8 @@ main h3 span {
   flex-flow: column; }
 
 .formMessage input {
+  text-align: top;
+  outline: none;
   padding-left: 20px;
   background: #26292e;
   border: none;
@@ -284,12 +297,65 @@ main h3 span {
 .formMessage .submit {
   width: 170px;
   padding: 20px 55px;
-  background: #3c3f45; }
+  background: #3c3f45;
+  color: #fefefe; }
+
+.formMessage .submit:hover {
+  background: #de5e60; }
 
 .formMessage .text2 {
   height: 400px;
   margin-bottom: 30px; }
 
-.getInTouch .contacts h3, p {
-  margin-bottom: 30px;
-  text-align: left; }
+.getInTouch h3 {
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 100px; }
+
+.getInTouch p {
+  text-align: center; }
+
+@media screen and (min-width: 768px) {
+  .getInTouch p {
+    text-align: left; }
+  .getInTouch h3 {
+    text-align: left; } }
+
+.formMessage .text, .formMessage .email {
+  border-bottom: 0.5px solid grey; }
+
+.footerWrapper p {
+  text-align: center; }
+
+.footerWrapper .searching {
+  text-align: center;
+  background: #26292e; }
+
+.searching p {
+  padding: 115px 0 70px 0;
+  font-size: 2.0rem;
+  color: #7f8289; }
+
+.searching img {
+  padding-bottom: 3rem; }
+
+.searching span:nth-of-type(2) {
+  color: #fefefe; }
+
+.footerWrapper .social {
+  background: #2f3238; }
+
+.footerWrapper .copyright {
+  background: #26292e; }
+
+.copyright span:nth-of-type(2) {
+  color: #fefefe; }
+
+.footerWrapper .copyright p {
+  padding: 25px 0;
+  font-size: 1.2rem; }
+
+.footerWrapper .social a {
+  width: 70px;
+  height: 70px;
+  background: #26292e; }
