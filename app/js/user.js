@@ -8,9 +8,9 @@ $(document).ready(function(){
 	});
 }); 
 
-$(document).ready(function() {
-	$('.header__button').click(function() {
-		$('.header__button').toggleClass('active');
-		$('.menu').toggleClass('active');
-	});
-});
+//$(document).ready(function() {
+//	$('.header__button').click(function() {
+//		$('.header__button').toggleClass('active');
+//		$('.menu').toggleClass('active');
+//	});
+//});

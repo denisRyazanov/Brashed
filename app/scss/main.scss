@@ -3,6 +3,7 @@ $colorGrey: #2f3238;
 $colorDarkGrey: #26292e;
 
 * {
+  outline: none;
   box-sizing: border-box;
   padding: 0;
   margin: 0; }
@@ -12,6 +13,7 @@ html {
 
 
 .page {
+    
     font-family: "Titillium Web";
     overflow: hidden;
 	overflow-y: hidden;
@@ -34,7 +36,6 @@ html {
 	width: 100vw;
 	background: url(../assets/img/Brushed2.jpg);
 	height: 100vh;
-    outline: none;
 }
 
 .one-time img{
@@ -50,7 +51,6 @@ html {
 	background: url(../assets/img/arrow-down.png) 18px 17px no-repeat $colorDarkGrey;
 	text-indent: -99999px;
 	border: none;
-    outline: none;
 	position: absolute;
 	z-index: 2;
 	&:hover {
@@ -103,91 +103,88 @@ html {
 ----------------------------------------------------------------------------*/
 
 .header {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    background: $colorDarkGrey;
+    position: sticky;
 }
-.header .logo {
-    padding: 2.4rem; }
-
-.navigation .menu {
-    margin-top: 25px;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
-}
-
-.navigation .menu li{
-    list-style: none;
-    margin-right: 48px;
-}
-
-.navigation .menu a:hover{
-    color: $colorRed;
-}
-
-.navigation .menu li:last-child{
-    margin-right: 25px;
-}
-
-.navigation .menu a{
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fefefe;
-}
-
-.menu {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	z-index: 3;
-	width: calc(30% + 34px);
-	left: calc(-1 * (30% + 34px));
-	transition: left 1s;
-	background: rgba(0,0,0,.8);}
-	.active {
-		left: 0;}
-	
-.navigation {
-	position: relative;}
-
-.header__button {
-	margin-bottom: 1rem;
-	float: right;
-	padding: .6rem;
-	position: relative;
-	border-top: 4px solid #fff;
-	border-bottom: 4px solid #fff;
-	display: block;
-    top: -40px;
-	height: 24px;
-	width: 34px;
-}
-.header__button::before {
-	content: '';
-	height: 4px;
-	width: 34px;
-	position: absolute;
-	top: 6px;
-	left: 0;
-	background: #fff;}
+//.header .logo {
+//    padding: 2.4rem; }
+//
+//.navigation .menu {
+//    margin-top: 25px;
+//    display: flex;
+//    flex-flow: wrap;
+//    justify-content: space-between;
+//}
+//
+//.navigation .menu li{
+//    list-style: none;
+//    margin-right: 48px;
+//}
+//
+//.navigation .menu a:hover{
+//    color: $colorRed;
+//}
+//
+//.navigation .menu li:last-child{
+//    margin-right: 25px;
+//}
+//
+//.navigation .menu a{
+//    font-weight: 600;
+//    text-decoration: none;
+//    text-transform: uppercase;
+//    color: #fefefe;
+//}
+//
+//.menu {
+//	position: fixed;
+//	top: 0;
+//	bottom: 0;
+//	z-index: 3;
+//	width: calc(30% + 34px);
+//	left: calc(-1 * (30% + 34px));
+//	transition: left 1s;
+//	background: rgba(0,0,0,.8);}
+//	.active {
+//		left: 0;}
+//	
+//.navigation {
+//	position: relative;}
+//
+//.header__button {
+//	margin-bottom: 1rem;
+//	float: right;
+//	padding: .6rem;
+//	position: relative;
+//	border-top: 4px solid #fff;
+//	border-bottom: 4px solid #fff;
+//	display: block;
+//    top: -40px;
+//	height: 24px;
+//	width: 34px;
+//}
+//.header__button::before {
+//	content: '';
+//	height: 4px;
+//	width: 34px;
+//	position: absolute;
+//	top: 6px;
+//	left: 0;
+//	background: #fff;}
 
 @media screen and (min-width: 768px) {
 	
-.menu {
-	position: static;
-	width: 100%;
-	background: none;
-}
-
-.navigation {
-	position: static;}
-
-.header__button {
-	display: none;
-}
+//.menu {
+//	position: static;
+//	width: 100%;
+//	background: none;
+//}
+//
+//.navigation {
+//	position: static;}
+//
+//.header__button {
+//	display: none;
+//}
 	
 }
 /* MAIN -------------------------------------------------------------------------------------------
@@ -219,7 +216,12 @@ main h3 span {
 .section .aside {
 	padding-bottom: 4rem;
 }
-
+.section .aside ul {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+	
+}
 .section .aside h4 {
 	text-transform: uppercase;
 	font-size: 2.4rem;
@@ -241,12 +243,9 @@ main h3 span {
 	margin-bottom: 30px;
 }
 
-.ourWork .article:nth-of-type(2n+3) div{
-	background: #32353b;
-}
-  
-.ourWork .article:nth-of-type(6) div{
-	background: $colorRed;
+
+.main .content:hover{
+    background-color: $colorRed;
 }
 
 .ourWork li a {
@@ -264,7 +263,12 @@ main h3 span {
 }
 
 @media screen and (min-width: 1170px) {
-    
+    .section .aside ul {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+	
+}
 	.ourWork .aside {
 		margin-bottom: 325px;
 	}
@@ -286,6 +290,10 @@ main h3 span {
 	text-align: center;
     font-size: 2rem;
     padding-top: 115px;
+}
+
+.aboutUs .article p{
+	padding-bottom: 1.5rem;
 }
 
 .aboutUs .contentRed {
@@ -322,10 +330,12 @@ main h3 span {
 	color: $colorRed;
 }
 
+.aboutUs .purchase {
+    display: inline-block;
+    text-align: center;
+}
+
 .aboutUs .purchase a{
-	position: relative;
-	left: 80px;
-	top: 80px;
 	color: #fefefe;
 	text-decoration: none;
 	padding: 1.5rem 3rem;
@@ -348,8 +358,6 @@ main h3 span {
 }
 
 .formMessage input {
-    text-align: top;
-    outline: none;
 	padding-left: 20px;
 	background: #26292e;
 	border: none;
@@ -358,7 +366,7 @@ main h3 span {
 }
 
 .formMessage .submit {
-	width: 170px;
+	width: 100%;
 	padding: 20px 55px;
 	background: #3c3f45;
     color: #fefefe;
@@ -369,14 +377,17 @@ main h3 span {
 }
 
 .formMessage .text2 {
+    padding-left: 20px;
+    border: none;
+    background: #26292e;
 	height: 400px;
 	margin-bottom: 30px;
 }
 
-.getInTouch h3 {
+.getInTouch.contacts h3 {
     font-weight: 300;
     text-align: center;
-	margin-bottom: 100px;
+	margin-bottom: 30px;
 }
 .getInTouch p {
     text-align: center;
@@ -393,7 +404,7 @@ main h3 span {
 }
 
 .formMessage .text,.formMessage .email {
-	border-bottom: 0.5px solid grey;
+	border-bottom: 0.5px solid #2f3238;
 }
 .footerWrapper p{
     text-align: center;
@@ -403,7 +414,6 @@ main h3 span {
     background: #26292e;
 }
 .searching p {
-    padding: 115px 0 70px 0;
     font-size: 2.0rem;
     color: #7f8289;
 }

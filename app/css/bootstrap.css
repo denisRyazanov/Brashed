@@ -1672,13 +1672,10 @@ select[multiple].input-lg {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
+  
 }
 @media (min-width: 768px) {
-  .navbar {
-    border-radius: 4px;
-  }
+
 }
 @media (min-width: 768px) {
   .navbar-header {
@@ -1999,8 +1996,7 @@ select[multiple].input-lg {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #26292e;
 }
 .navbar-default .navbar-brand {
   color: #777777;
@@ -2014,11 +2010,12 @@ select[multiple].input-lg {
   color: #777777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777777;
+  text-transform: uppercase;
+  color: #fefefe;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
+  color: #de5e60;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,

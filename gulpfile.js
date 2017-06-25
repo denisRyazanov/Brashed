@@ -55,21 +55,21 @@ gulp.task('watch:sass', function() {
 });
 
 // watch:pug
-gulp.task('watch:pug', function() {
-    return gulp.src(path.src.pug)
-        .pipe(pug({
-            pretty: true
-        })
-        .on('error', function(error) {
-            console.log(error);
-            this.end();
-           })
-        )      
-        .pipe(gulp.dest(path.basedir))
-        .pipe(sync.reload({
-            stream: true
-        }));
-});
+//gulp.task('watch:pug', function() {
+//    return gulp.src(path.src.pug)
+//        .pipe(pug({
+//            pretty: true
+//        })
+//        .on('error', function(error) {
+//            console.log(error);
+//            this.end();
+//           })
+//        )      
+//        .pipe(gulp.dest(path.basedir))
+//        .pipe(sync.reload({
+//            stream: true
+//        }));
+//});
 
 // watch all
 gulp.task('watch', ['watch:server','watch:pug','watch:sass'], function() {

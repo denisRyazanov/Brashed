@@ -17,19 +17,31 @@
       <div class="thirdSlide"><img src="assets/img/Brushed.png" alt="logo"></div>
     </div>
     <header class="header">
-      <div class="logo"><img src="assets/img/logo.png" alt="logo"></div>
-      <nav class="navigation"><span class="header__button"></span>
-        <ul class="menu">
-          <li><a href="">home</a></li>
-          <li><a href="">our work</a></li>
-          <li><a href="">about us</a></li>
-          <li><a href="">contact</a></li>
-        </ul>
-      </nav>
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our work</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
     </header>
-    <main class="main row">
-      <div class="mainContent container-fluid">
-        <div class="ourWorkWrapper">
+    <main class="main">
+        <div class="ourWorkWrapper container-fluid">
           <div class="ourWork">
             <h2>Our Work</h2>
             <h3>See Also Great Stuff on <span>Dribbble.</span></h3>
@@ -74,7 +86,7 @@
             </section>
           </div>
         </div>
-        <div class="aboutUsWrapper">
+        <div class="aboutUsWrapper container-fluid">
           <div class="aboutUs">
             <h2>About Us</h2>
             <h3>The most important thing to us is building products people love.</h3>
@@ -103,14 +115,15 @@
               </div>
               <div class="row">
                 <article class="article border col-sm-9">
-                  <h3>New Brushed- PRemium one page html/css template</h3>
+                  <h3><span>New </span>Brushed - PRemium one page html/css template</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas neque diam, luctus at laoreet in, auctor ut tellus. Etiam enim lacus, ornare et tempor, rhoncus rhoncus sem. Aliquam volutpat arcu et nibh mollis eleifend pharetra lorem scelerisque. Donec vel enim purus, id viverra neque. Cras in velit ante, eget pellentesque sem. Duis tincidunt erat quam. Etiam placerat sapien elit.</p>
                 </article>
                 <div class="purchase col-sm-3"><a href="">PURCHASE</a></div>
               </div>
             </section>
           </div>
-          <div class="getInTouchWrapper">
+        </div>
+          <div class="getInTouchWrapper container-fluid">
             <div class="getInTouch">
               <h2>Get in Touch</h2>
               <h3>We’re currently accepting new client projects. Think we might help? We’d love to hear from you.  people love.</h3>
@@ -118,33 +131,40 @@
                 <form class="formMessage col-sm-9">
                   <input class="text" type="text" placeholder="Full Name">
                   <input class="email" type="email" placeholder="Email Address">
-                  <input class="text2" type="text" placeholder="Your Message">
+                  <textarea class="text2" placeholder="Your Message"></textarea> 
                   <input class="submit" type="submit" value="Submit">
                 </form>
                 <div class="contacts col-sm-3">
                   <h3>CONTACT DETAILS</h3>
                   <p>info@creativeds.sh</p>
-                  <p>(916)378-4475</p>
-                  <p>Creativedash 5701 Lonetree Blvd. 105 Rocklin,CA 95765</p>
+                  <p>(916)378-4475 <br>
+                  Creativedash 5701 Lonetree Blvd. 105 <br> Rocklin,CA 95765</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </main>
     <footer class="footer">
       <div class="footerWrapper">
         <div class="searching">
           <p>Searching on the go is now faster w/ quick sitelinks &amp; quick view <span>goo.gl/i4KTZ  </span><span>#googlesearch </span><span>about a day ago</span></p><a href=""><img src="assets/img/twitterRed.png" alt="twitter"></a>
         </div>
-        <div class="socialFoot"><a href=""><img src="assets/img/twitter.png"></a><a href=""><img src="assets/img/facebook.png"></a><a href=""><img src="assets/img/vimeo.png"></a><a href=""><img src="assets/img/behance.png"></a><a href=""><img src="assets/img/dribbble.png"></a></div>
+        <div class="socialFoot">
+           <ul>
+               <li><a href=""><img src="assets/img/twitter.png"></a></li>
+               <li><a href=""><img src="assets/img/facebook.png"></a></li>
+               <li><a href=""><img src="assets/img/vimeo.png"></a></li>
+               <li><a href=""><img src="assets/img/behance.png"></a></li>
+               <li><a href=""><img src="assets/img/dribbble.png"></a></li>
+           </ul>
+        </div>
         <div class="copyright">
-          <p>© 2013 BRUSHED. <span>BRUSHED TEMPLATE </span><span>by </span><span>ALESSIO ATZENI</span></p>
+          <p>© 2013 BRUSHED. <span>BRUSHED TEMPLATE </span><span>by </span><span class="class">ALESSIO ATZENI</span></p>
         </div>
       </div>
     </footer>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"> </script>
     <script src="js/slick.min.js"></script>
     <script src="js/user.js"></script>
   </div>
